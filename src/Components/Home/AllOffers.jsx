@@ -51,7 +51,7 @@ const AllOffers = () => {
                         }
                     }}
                 >
-                    <Typography variant="h1" sx={{ fontWeight: '600', letterSpacing: '.1ch', fontSize: '35px', color: 'white', marginLeft: '50px', marginTop: '30px' }}>Get Air Ticket at <br /> Low Price</Typography>
+                    <Typography variant="h1" sx={{ fontWeight: '600', letterSpacing: '.1ch', fontSize: '35px', color: 'white', marginLeft: '20px', marginTop: '30px' }}>Get Air Ticket at <br /> Low Price</Typography>
                 </Box>
                 <Box
                     sx={{

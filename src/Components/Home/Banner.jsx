@@ -13,7 +13,6 @@ import Holiday from "./Holiday";
 const Banner = () => {
     const [isActive, setisActive] = useState('air-ticket')
 
-
     return (
         <Box
             sx={{
