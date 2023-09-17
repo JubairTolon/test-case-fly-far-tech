@@ -10,4 +10,9 @@
   box-sizing: border-box;
   max-width: 1680px;
   font-family: 'Poppins', sans-serif;
+  /* background-color: rgba(133, 0, 80, 0.815); */
+}
+
+body {
+  background-color: white;
 }

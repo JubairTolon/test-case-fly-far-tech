@@ -1,18 +1,67 @@
-import React from 'react';
+// import React from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import logo from '../../assets/logo.png'
+import { Box, Button } from '@mui/material';
 
 const NavBar = () => {
     const navigate = useNavigate();
     return (
-        <>
-            <nav className='flex items-center justify-between w-full sm:h-12 md:h-16 lg:h-20 sm:px-16 md:px-28 lg:px-52 bg-primary'>
-                <Link to='/'>
-                    <img className='sm:w-20 md:w-28 lg:w-32  cursor-pointer' src={logo} alt="" />
-                </Link>
-                <button className='sm:text-xs md:text-l lg:text-l sm:px-4 md:px-4 lg:px-4 py-2 rounded-md bg-tertiary text-praimary-text active:bg-secondary' onClick={() => navigate('/login')}>Sign In</button>
-            </nav >
-        </>
+        <Box sx={{
+            backgroundColor: 'primary.main',
+            display: 'flex',
+            justifyContent: 'space-between',
+            alignItems: 'center',
+            height: {
+                xs: '50px',
+                sm: '60px',
+                md: '60px',
+                lg: '80px'
+            },
+            paddingLeft: {
+                xs: '50px',
+                sm: '70px',
+                md: '120px',
+                lg: '150px'
+            },
+            paddingRight: {
+                xs: '50px',
+                sm: '70px',
+                md: '120px',
+                lg: '150px'
+            },
+        }} >
+            <Link to='/'>
+                <Box
+                    component='img'
+                    src={logo}
+                    alt='logo'
+                    sx={{
+                        width: {
+                            xs: '70px',
+                            sm: '80px',
+                            md: '100px',
+                            lg: '140px'
+                        },
+                    }}>
+                </Box>
+            </Link>
+            <Button
+                onClick={() => navigate('/login')}
+                variant="contained"
+                sx={{
+                    backgroundColor: 'primary.dark',
+                    color: 'white',
+                    textTransform: "capitalize",
+                    letterSpacing: '.1rem',
+                    borderRadius: '6px',
+                    boxShadow: 'none',
+                    ":hover": {
+                        boxShadow: 'none'
+                    }
+                }}>
+                Sign In
+            </Button>
+        </Box >
     );
 };
 

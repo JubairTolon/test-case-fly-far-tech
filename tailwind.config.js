@@ -11,6 +11,11 @@ export default {
       'tertiary': '#85004f',
       'praimary-text': '#ffffff',
     },
+    borderRadius: {
+      'sm': '5px',
+      'md': '8px',
+      'lg': '10px',
+    },
     screens: {
       'sm': '320px',
       'md': '768px',
