@@ -9,10 +9,39 @@ const HotDeals = () => {
     const [hotDeal, setHotDeal] = useState('all');
     return (
         <>
-            <Box sx={{ paddingX: '150px', marginTop: '80px' }}>
-                <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', height: '50px' }}>
-                    <Typography variant="h1" sx={{ color: 'black', fontSize: '30px' }}>Hot Deals</Typography>
-                    <Box sx={{ backgroundColor: 'secondary.light', height: '50px', display: 'flex', alignItems: 'center', paddingX: '15px', borderRadius: '50px', width: '35%', justifyContent: 'space-between' }}>
+            <Box sx={{
+                paddingX: {
+                    xs: '20px',
+                    sm: '80px',
+                    md: '100px',
+                    lg: '150px'
+                },
+                marginTop: {
+                    xs: '30px',
+                    sm: '50px',
+                    md: '60px',
+                    lg: '80px'
+                }
+            }}>
+                <Box sx={{
+                    display: 'flex',
+                    flexDirection: {
+                        xs: 'column',
+                        sm: 'column',
+                        md: 'row',
+                        lg: 'row'
+                    }, justifyContent: 'space-between', alignItems: 'center', height: '50px'
+                }}>
+                    <Typography variant="h1" sx={{
+                        color: 'black', fontSize: '30px',
+                        marginBottom: {
+                            xs: '15px',
+                            sm: '15px',
+                            md: '0',
+                            lg: '0'
+                        }
+                    }}>Hot Deals</Typography>
+                    <Box sx={{ backgroundColor: 'secondary.light', height: '50px', display: 'flex', alignItems: 'center', paddingX: '15px', borderRadius: '50px', width: '380px', justifyContent: 'space-between' }}>
                         <Button
                             onClick={() => setHotDeal('all')}
                             sx={hotDeal === 'all' ? {

@@ -7,7 +7,15 @@ import plane2 from '../../assets/plane2.jpg';
 const Flight = () => {
     return (
         <>
-            <Box sx={{ display: 'flex', justifyContent: 'space-between', paddingTop: '40px' }}>
+            <Box sx={{
+                display: 'flex', justifyContent: 'space-between',
+                marginTop: {
+                    xs: '60px',
+                    sm: '60px',
+                    md: '40px',
+                    lg: '40px'
+                }
+            }}>
                 <Box
                     sx={{
                         height: '350px',

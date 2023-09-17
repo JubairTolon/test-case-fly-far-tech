@@ -38,7 +38,7 @@ const AirTicket = () => {
         setIsOpenReturnCal(!isOpenReturnCal);
     };
     return (
-        <Box>
+        <Box sx={{}}>
             <Box>
                 <Button
                     onClick={() => setWay('one-way')}
@@ -129,14 +129,14 @@ const AirTicket = () => {
                 </Button>
             </Box>
             <Box sx={{ width: '100%', marginTop: '20px' }}>
-                <form className='flex flex-wrap w-full items-center justify-between' noValidate autoComplete="off">
-                    <Box sx={{ height: '100px', width: '30%', display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
-                        <span className='flex bg-praimary-text items-center h-12 w-full rounded-sm'><FlightTakeoffIcon sx={{ color: 'primary.main', marginX: '10px' }} /><input type='texy' className='focus:outline-none' placeholder='Enter address' /></span>
-                        <span className='flex bg-praimary-text items-center h-12 w-full rounded-sm'><FlightLandIcon sx={{ color: 'primary.main', marginX: '10px' }} /><input type='texy' className='focus:outline-none' placeholder='Enter address' /></span>
+                <form className='flex flex-wrap w-full items-center gap-6 xl:justify-between' noValidate autoComplete="off">
+                    <Box sx={{ height: '100px', width: '300px', display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
+                        <span className='flex bg-praimary-text items-center h-12 w-full rounded-sm'><FlightTakeoffIcon sx={{ color: 'primary.main', marginX: '10px' }} /><input type='texy' className='focus:outline-none w-full' placeholder='Enter address' /></span>
+                        <span className='flex bg-praimary-text items-center h-12 w-full rounded-sm'><FlightLandIcon sx={{ color: 'primary.main', marginX: '10px' }} /><input type='texy' className='focus:outline-none w-full' placeholder='Enter address' /></span>
                     </Box>
                     <Box
                         sx={{
-                            display: 'flex', cursor: 'pointer', padding: '6px', backgroundColor: 'white', height: '100px', width: '12%', borderRadius: '5px'
+                            display: 'flex', cursor: 'pointer', padding: '6px', backgroundColor: 'white', height: '100px', width: '120px', borderRadius: '5px'
                         }}>
                         <Box sx={{ color: 'black', display: 'flex', width: '100%' }} onClick={handleStartCalander}>
                             <CalendarMonthIcon sx={{ fontSize: '25px', marginRight: '10px' }} />
@@ -152,7 +152,7 @@ const AirTicket = () => {
                     </Box>
                     <Box
                         sx={{
-                            display: 'flex', cursor: 'pointer', padding: '6px', backgroundColor: 'white', height: '100px', width: '12%', borderRadius: '5px'
+                            display: 'flex', cursor: 'pointer', padding: '6px', backgroundColor: 'white', height: '100px', width: '120px', borderRadius: '5px'
                         }}>
                         <Box sx={{ color: 'black', display: 'flex', width: '100%' }} onClick={handleReturnCalander}>
                             <CalendarMonthIcon sx={{ fontSize: '25px', marginRight: '10px' }} />
@@ -166,14 +166,14 @@ const AirTicket = () => {
                             )}
                         </Box>
                     </Box>
-                    <Box sx={{ height: '100px', width: '30%', display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
-                        <span className='flex bg-praimary-text items-center h-12 w-full rounded-sm'><input type='texy' className='focus:outline-none pl-3' placeholder='Enter address' /></span>
-                        <span className='flex bg-praimary-text items-center h-12 w-full rounded-sm'><input type='texy' className='focus:outline-none pl-3' placeholder='Enter address' /></span>
+                    <Box sx={{ height: '100px', width: '250px', display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
+                        <span className='flex bg-praimary-text items-center h-12 w-full rounded-sm'><input type='texy' className='focus:outline-none pl-3 w-full' placeholder='Enter address' /></span>
+                        <span className='flex bg-praimary-text items-center h-12 w-full rounded-sm'><input type='texy' className='focus:outline-none pl-3 w-full' placeholder='Enter address' /></span>
                     </Box>
                     <Button
                         sx={{
                             backgroundColor: 'primary.light',
-                            height: '100px', width: '12%',
+                            height: '100px', width: '120px',
                             borderRadius: '5px',
                             ':hover': {
                                 backgroundColor: 'secondary.main'

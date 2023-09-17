@@ -17,16 +17,10 @@ const NavBar = () => {
                 md: '60px',
                 lg: '80px'
             },
-            paddingLeft: {
-                xs: '50px',
-                sm: '70px',
-                md: '120px',
-                lg: '150px'
-            },
-            paddingRight: {
-                xs: '50px',
-                sm: '70px',
-                md: '120px',
+            paddingX: {
+                xs: '20px',
+                sm: '80px',
+                md: '100px',
                 lg: '150px'
             },
         }} >
@@ -40,7 +34,7 @@ const NavBar = () => {
                             xs: '70px',
                             sm: '80px',
                             md: '100px',
-                            lg: '140px'
+                            lg: '150px'
                         },
                     }}>
                 </Box>

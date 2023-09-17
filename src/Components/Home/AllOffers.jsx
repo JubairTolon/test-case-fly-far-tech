@@ -7,17 +7,18 @@ import plane2 from '../../assets/plane2.jpg';
 const AllOffers = () => {
     return (
         <>
-            <Box sx={{ display: 'flex', justifyContent: 'space-between', paddingTop: '40px' }}>
+            <Box sx={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'space-between', paddingTop: '40px' }}>
                 <Box
                     sx={{
                         height: '350px',
-                        width: '30%',
+                        width: '350px',
                         backgroundImage: `url(${plane2})`,
                         backgroundPosition: "center",
                         backgroundSize: "cover",
                         backgroundRepeat: "no-repeat",
                         borderRadius: '10px',
                         cursor: 'pointer',
+                        marginBottom: '10px',
                         ":active": {
                             opacity: '.9'
                         }
@@ -27,13 +28,14 @@ const AllOffers = () => {
                 <Box
                     sx={{
                         height: '350px',
-                        width: '30%',
+                        width: '350px',
                         backgroundImage: `url(${plane1})`,
                         backgroundPosition: "center",
                         backgroundSize: "cover",
                         backgroundRepeat: "no-repeat",
                         borderRadius: '10px',
                         cursor: 'pointer',
+                        marginBottom: '10px',
                         ":active": {
                             backgroundColor: 'red'
                         }
@@ -44,13 +46,14 @@ const AllOffers = () => {
                 <Box
                     sx={{
                         height: '350px',
-                        width: '30%',
+                        width: '350px',
                         backgroundImage: `url(${plane2})`,
                         backgroundPosition: "center",
                         backgroundSize: "cover",
                         backgroundRepeat: "no-repeat",
                         borderRadius: '10px',
                         cursor: 'pointer',
+                        marginBottom: '10px',
                         ":active": {
                             opacity: '.9'
                         }
