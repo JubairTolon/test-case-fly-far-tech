@@ -31,9 +31,9 @@ const Footer = () => {
                         lg: '150px'
                     }
                 }}>
-                <Box sx={{ display: 'flex', flexDirection: 'row', gap: '18px', flexWrap: 'wrap' }}>
+                <Box sx={{ display: 'flex', flexDirection: 'row', gap: '18px', flexWrap: 'wrap', flexGrow: 'initial' }}>
                     <Box sx={{
-                        width: '300px',
+                        width: '280px',
                         marginBottom: {
                             sm: '20px'
                         }

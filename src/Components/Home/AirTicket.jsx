@@ -129,7 +129,7 @@ const AirTicket = () => {
                 </Button>
             </Box>
             <Box sx={{ width: '100%', marginTop: '20px' }}>
-                <form className='flex flex-wrap w-full xl:gap-0 gap-6 xl:justify-between'>
+                <form className='flex flex-wrap w-full xl:gap-0 gap-2 xl:justify-between'>
                     <Box sx={{
                         height: '100px',
                         width: {
@@ -155,7 +155,7 @@ const AirTicket = () => {
                         sx={{
                             display: 'flex', cursor: 'pointer', padding: '6px', backgroundColor: 'white', height: '100px', borderRadius: '5px', justifyContent: 'center',
                             marginBottom: {
-                                xs: '15px',
+                                xs: 0,
                                 sm: '15px',
                                 md: 0,
                                 lg: 0
@@ -173,14 +173,14 @@ const AirTicket = () => {
                                 lg: '140px',
                             },
                         }}>
-                        <CalendarMonthIcon sx={{ fontSize: '25px', marginRight: '10px' }} />
-                        {startDate !== null ?
+                        {!isOpenStartCal && <CalendarMonthIcon sx={{ fontSize: '25px', marginRight: '10px' }} />}
+                        {startDate !== null && !isOpenStartCal ?
                             <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
                                 <span>{startDate.toLocaleString('default', { month: 'long' })}</span>
                                 <span className='font-bold text-2xl'>{startDate.getDay()}</span>
                                 <span>{startDay}</span>
                             </Box> :
-                            <Typography>Select start Flight</Typography>
+                            <Typography>{!isOpenStartCal && 'Select start Flight'}</Typography>
                         }
                         {isOpenStartCal && (
                             <DatePicker
@@ -207,14 +207,14 @@ const AirTicket = () => {
                                 lg: '140px',
                             },
                         }}>
-                        <CalendarMonthIcon sx={{ fontSize: '25px', marginRight: '10px' }} />
-                        {returnDate !== null ?
+                        {!isOpenReturnCal && <CalendarMonthIcon sx={{ fontSize: '25px', marginRight: '10px' }} />}
+                        {returnDate !== null && !isOpenReturnCal ?
                             <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
                                 <span>{returnDate.toLocaleString('default', { month: 'long' })}</span>
                                 <span className='font-bold text-2xl'>{returnDate.getDay()}</span>
                                 <span>{returnDay}</span>
                             </Box> :
-                            <Typography>Select return Flight</Typography>
+                            <Typography>{!isOpenReturnCal && "Select return Flight"}</Typography>
                         }
                         {isOpenReturnCal && (
                             <DatePicker selected={returnDate} onChange={handleReturnDate} inline />
@@ -240,8 +240,18 @@ const AirTicket = () => {
                     <Button
                         sx={{
                             backgroundColor: 'primary.light',
-                            height: '100px', width: '120px',
-                            borderRadius: '5px',
+                            height: {
+                                xs: '60px',
+                                sm: '60px',
+                                md: '100px',
+                                lg: '100px',
+                            },
+                            width: {
+                                xs: '100%',
+                                sm: '100%',
+                                md: '120px',
+                                lg: '120px',
+                            }, borderRadius: '5px',
                             ':hover': {
                                 backgroundColor: 'secondary.main'
                             }

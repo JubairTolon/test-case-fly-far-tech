@@ -11,7 +11,12 @@ const AllOffers = () => {
                 <Box
                     sx={{
                         height: '350px',
-                        width: '350px',
+                        width: {
+                            xs: '100%',
+                            sm: '100%',
+                            md: '350px',
+                            lg: '350px',
+                        },
                         backgroundImage: `url(${plane2})`,
                         backgroundPosition: "center",
                         backgroundSize: "cover",
@@ -28,7 +33,12 @@ const AllOffers = () => {
                 <Box
                     sx={{
                         height: '350px',
-                        width: '350px',
+                        width: {
+                            xs: '100%',
+                            sm: '100%',
+                            md: '350px',
+                            lg: '350px',
+                        },
                         backgroundImage: `url(${plane1})`,
                         backgroundPosition: "center",
                         backgroundSize: "cover",
@@ -46,7 +56,12 @@ const AllOffers = () => {
                 <Box
                     sx={{
                         height: '350px',
-                        width: '350px',
+                        width: {
+                            xs: '100%',
+                            sm: '100%',
+                            md: '350px',
+                            lg: '350px',
+                        },
                         backgroundImage: `url(${plane2})`,
                         backgroundPosition: "center",
                         backgroundSize: "cover",

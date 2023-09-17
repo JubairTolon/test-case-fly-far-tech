@@ -18,7 +18,7 @@ const Banner = () => {
         <Box
             sx={{
                 height: {
-                    xs: '900px',
+                    xs: '800px',
                     sm: '700px',
                     md: '700px',
                     lg: '700px'
@@ -188,7 +188,7 @@ const Banner = () => {
                 <Box sx={{
                     display: 'flex', flexDirection: 'column', justifyContent: 'center',
                     height: {
-                        xs: '690px',
+                        xs: '600px',
                         sm: '100%',
                         md: '100%',
                         lg: '320px'
