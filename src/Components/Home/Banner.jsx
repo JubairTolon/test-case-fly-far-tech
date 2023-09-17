@@ -18,9 +18,9 @@ const Banner = () => {
         <Box
             sx={{
                 height: {
-                    xs: '800px',
-                    sm: '800px',
-                    md: '800px',
+                    xs: '900px',
+                    sm: '700px',
+                    md: '700px',
                     lg: '700px'
                 },
                 width: '100%',
@@ -188,9 +188,9 @@ const Banner = () => {
                 <Box sx={{
                     display: 'flex', flexDirection: 'column', justifyContent: 'center',
                     height: {
-                        xs: '580px',
-                        sm: '500px',
-                        md: '320px',
+                        xs: '690px',
+                        sm: '100%',
+                        md: '100%',
                         lg: '320px'
                     }, backgroundColor: 'rgba(170, 0, 80, 0.9)',
                     paddingX: {

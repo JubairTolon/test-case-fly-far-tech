@@ -11,6 +11,7 @@ const NavBar = () => {
             display: 'flex',
             justifyContent: 'space-between',
             alignItems: 'center',
+            marginX: 0,
             height: {
                 xs: '50px',
                 sm: '60px',

@@ -10,9 +10,23 @@
   box-sizing: border-box;
   max-width: 1680px;
   font-family: 'Poppins', sans-serif;
-  /* background-color: rgba(133, 0, 80, 0.815); */
 }
 
-body {
+body,
+html {
   background-color: white;
+}
+
+body::-webkit-scrollbar {
+  width: 8px;
+}
+
+body::-webkit-scrollbar-track {
+  background: #0A0A0A;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: rgb(160, 0, 115);
+  border-radius: 20px;
+  /* border: 3px solid orange; */
 }

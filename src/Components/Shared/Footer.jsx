@@ -11,7 +11,13 @@ const Footer = () => {
         <>
             <Box
                 sx={{
-                    marginTop: '100px', backgroundColor: 'secondary.dark',
+                    backgroundColor: 'secondary.dark', paddingY: '40px', color: 'white', width: '100%',
+                    marginTop: {
+                        xs: '40px',
+                        sm: '60px',
+                        md: '80px',
+                        lg: '100px'
+                    },
                     height: {
                         xs: 'auto',
                         sm: 'auto',
@@ -23,14 +29,12 @@ const Footer = () => {
                         sm: '80px',
                         md: '100px',
                         lg: '150px'
-                    }, paddingY: '40px', color: 'white', width: '100%',
+                    }
                 }}>
-                <Box
-                    sx={{
-                        display: 'flex', flexDirection: 'row', gap: '18px', flexWrap: 'wrap',
-                    }}>
+                <Box sx={{ display: 'flex', flexDirection: 'row', gap: '18px', flexWrap: 'wrap' }}>
                     <Box sx={{
-                        width: '300px', marginBottom: {
+                        width: '300px',
+                        marginBottom: {
                             sm: '20px'
                         }
                     }}>
@@ -38,15 +42,16 @@ const Footer = () => {
                         <Typography sx={{ fontSize: '15px' }}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim eveniet minima quasi officia necessitatibus veniam quibusdam alias reprehenderit explicabo error. Lorem, ipsum dolor sit amet consectetur adipisicing elit.</Typography>
                     </Box>
                     <Box sx={{
-                        width: '300px', marginBottom: {
+                        width: '300px',
+                        marginBottom: {
                             sm: '20px'
                         }
                     }}>
                         <Typography sx={{ marginBottom: '10px' }} variant='h5'>Need help</Typography>
                         <Typography sx={{ fontSize: '15px' }}><strong>Address: </strong>Lorem ipsum dolor sit amet consectetur.</Typography>
-                        <Typography sx={{ marginTop: '5px', fontSize: '15px' }}><strong>Email: </strong>abc@company.com</Typography>
-                        <Typography sx={{ marginTop: '5px', fontSize: '15px' }}><strong>Phone1: </strong>+8801878763104</Typography>
-                        <Typography sx={{ marginTop: '5px', fontSize: '15px' }}><strong>Phone2: </strong>+8801878763104</Typography>
+                        <Typography sx={{ marginTop: '5px', fontSize: '15px' }}>Email: abc@company.com</Typography>
+                        <Typography sx={{ marginTop: '5px', fontSize: '15px' }}>Phone1: +8801878763104</Typography>
+                        <Typography sx={{ marginTop: '5px', fontSize: '15px' }}>Phone2: +8801878763104</Typography>
                     </Box>
                     <Box sx={{
                         width: '180px', display: 'flex', flexDirection: 'column', marginBottom: {
@@ -85,12 +90,20 @@ const Footer = () => {
                         <Link className='mt-3 text-sm'>Lorem</Link>
                     </Box>
                 </Box >
-                <Box sx={{ display: 'flex', borderBottom: 1, borderColor: 'white', paddingY: '60px' }}>
+                <Box sx={{
+                    borderBottom: 1, borderColor: 'white', paddingY: '60px', display: 'flex',
+                    flexDirection: {
+                        xs: 'column',
+                        sm: 'column',
+                        md: 'row',
+                        lg: 'row'
+                    },
+                }}>
                     <Box>
                         <Typography variant='h5'>We Accept</Typography>
-                        <img className='mt-3 w-1/2' src={payment} alt="payment systems allow" />
+                        <img className='mt-3 w-full lg:w-1/2' src={payment} alt="payment systems allow" />
                     </Box>
-                    <Box>
+                    <Box sx={{ marginTop: { xs: '30px' } }}>
                         <Typography sx={{ marginBottom: '10px' }} variant='h5'>Social</Typography>
                         <Box>
                             <span className='mr-3'><FacebookIcon sx={{ fontSize: '30px' }} /></span>
@@ -101,7 +114,7 @@ const Footer = () => {
                     </Box>
                 </Box>
                 <Typography sx={{ textAlign: 'center', fontSize: '14px', marginTop: '10px' }}>© {new Date().getFullYear()} All Right Reserved By BRAC And Developed By <Link className='underline'>Fly Far Tech</Link></Typography>
-            </Box>
+            </Box >
         </>
     );
 };

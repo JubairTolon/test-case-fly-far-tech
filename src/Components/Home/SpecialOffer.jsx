@@ -17,7 +17,12 @@ const SpecialOffer = () => {
                     md: '100px',
                     lg: '150px'
                 },
-                marginTop: '120px'
+                marginTop: {
+                    xs: '50px',
+                    sm: '80px',
+                    md: '100px',
+                    lg: '120px',
+                }
             }}>
                 <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', height: '50px' }}>
                     <Typography variant="h1" sx={{ color: 'black', fontSize: '30px' }}>Special Offers</Typography>

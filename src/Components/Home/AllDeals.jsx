@@ -9,6 +9,12 @@ const AllDeals = () => {
         <>
             <Box sx={{
                 display: 'flex', justifyContent: 'space-between',
+                flexDirection: {
+                    xs: 'column',
+                    sm: 'column',
+                    md: 'row',
+                    lg: 'row'
+                },
                 marginTop: {
                     xs: '60px',
                     sm: '60px',
@@ -19,7 +25,18 @@ const AllDeals = () => {
                 <Box
                     sx={{
                         height: '350px',
-                        width: '48%',
+                        width: {
+                            xs: '100%',
+                            sm: '100%',
+                            md: '48%',
+                            lg: '48%'
+                        },
+                        marginBottom: {
+                            xs: '15px',
+                            sm: '15px',
+                            md: 0,
+                            lg: 0
+                        },
                         backgroundImage: `url(${plane1})`,
                         backgroundPosition: "center",
                         backgroundSize: "cover",
@@ -36,7 +53,12 @@ const AllDeals = () => {
                 <Box
                     sx={{
                         height: '350px',
-                        width: '48%',
+                        width: {
+                            xs: '100%',
+                            sm: '100%',
+                            md: '48%',
+                            lg: '48%'
+                        },
                         backgroundImage: `url(${plane2})`,
                         backgroundPosition: "center",
                         backgroundSize: "cover",

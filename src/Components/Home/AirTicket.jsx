@@ -129,46 +129,113 @@ const AirTicket = () => {
                 </Button>
             </Box>
             <Box sx={{ width: '100%', marginTop: '20px' }}>
-                <form className='flex flex-wrap w-full items-center gap-6 xl:justify-between' noValidate autoComplete="off">
-                    <Box sx={{ height: '100px', width: '300px', display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
-                        <span className='flex bg-praimary-text items-center h-12 w-full rounded-sm'><FlightTakeoffIcon sx={{ color: 'primary.main', marginX: '10px' }} /><input type='texy' className='focus:outline-none w-full' placeholder='Enter address' /></span>
-                        <span className='flex bg-praimary-text items-center h-12 w-full rounded-sm'><FlightLandIcon sx={{ color: 'primary.main', marginX: '10px' }} /><input type='texy' className='focus:outline-none w-full' placeholder='Enter address' /></span>
+                <form className='flex flex-wrap w-full xl:gap-0 gap-6 xl:justify-between'>
+                    <Box sx={{
+                        height: '100px',
+                        width: {
+                            xs: '100%',
+                            sm: '400px',
+                            md: '400px',
+                            lg: '400px',
+
+                        },
+                        display: 'flex', flexDirection: 'column', justifyContent: 'space-between'
+                    }}>
+                        <span className='flex bg-praimary-text items-center h-12 w-full rounded-sm'>
+                            <FlightTakeoffIcon sx={{ color: 'primary.main', marginX: '10px' }} />
+                            <input type='texy' className='focus:outline-none w-full' placeholder='Enter address' />
+                        </span>
+                        <span className='flex bg-praimary-text items-center h-12 w-full rounded-sm'>
+                            <FlightLandIcon sx={{ color: 'primary.main', marginX: '10px' }} />
+                            <input type='texy' className='focus:outline-none w-full' placeholder='Enter address' />
+                        </span>
                     </Box>
                     <Box
+                        onClick={handleStartCalander}
                         sx={{
-                            display: 'flex', cursor: 'pointer', padding: '6px', backgroundColor: 'white', height: '100px', width: '140px', borderRadius: '5px'
+                            display: 'flex', cursor: 'pointer', padding: '6px', backgroundColor: 'white', height: '100px', borderRadius: '5px', justifyContent: 'center',
+                            marginBottom: {
+                                xs: '15px',
+                                sm: '15px',
+                                md: 0,
+                                lg: 0
+                            },
+                            alignItems: {
+                                xs: 'center',
+                                sm: 'center',
+                                md: 'top',
+                                lg: 'top'
+                            },
+                            width: {
+                                xs: '100%',
+                                sm: '140px',
+                                md: '140px',
+                                lg: '140px',
+                            },
                         }}>
-                        <Box sx={{ color: 'black', display: 'flex', width: '100%' }} onClick={handleStartCalander}>
-                            <CalendarMonthIcon sx={{ fontSize: '25px', marginRight: '10px' }} />
-                            {startDate !== null ? <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+                        <CalendarMonthIcon sx={{ fontSize: '25px', marginRight: '10px' }} />
+                        {startDate !== null ?
+                            <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
                                 <span>{startDate.toLocaleString('default', { month: 'long' })}</span>
-                                <span className='font-bold text-3xl'>{startDate.getDay()}</span>
+                                <span className='font-bold text-2xl'>{startDate.getDay()}</span>
                                 <span>{startDay}</span>
-                            </Box> : <Typography>Selest start Flight</Typography>}
-                            {isOpenStartCal && (
-                                <DatePicker selected={startDate} onChange={handleStartDate} inline />
-                            )}
-                        </Box>
+                            </Box> :
+                            <Typography>Select start Flight</Typography>
+                        }
+                        {isOpenStartCal && (
+                            <DatePicker
+                                dateFormat={"dd-MM-yyyy"}
+                                selected={startDate}
+                                onChange={handleStartDate}
+                                inline />
+                        )}
                     </Box>
                     <Box
+                        onClick={handleReturnCalander}
                         sx={{
-                            display: 'flex', cursor: 'pointer', padding: '6px', backgroundColor: 'white', height: '100px', width: '140px', borderRadius: '5px'
+                            display: 'flex', cursor: 'pointer', padding: '6px', backgroundColor: 'white', height: '100px', borderRadius: '5px', justifyContent: 'center',
+                            alignItems: {
+                                xs: 'center',
+                                sm: 'center',
+                                md: 'top',
+                                lg: 'top'
+                            },
+                            width: {
+                                xs: '100%',
+                                sm: '140px',
+                                md: '140px',
+                                lg: '140px',
+                            },
                         }}>
-                        <Box sx={{ color: 'black', display: 'flex', width: '100%' }} onClick={handleReturnCalander}>
-                            <CalendarMonthIcon sx={{ fontSize: '25px', marginRight: '10px' }} />
-                            {returnDate !== null ? <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+                        <CalendarMonthIcon sx={{ fontSize: '25px', marginRight: '10px' }} />
+                        {returnDate !== null ?
+                            <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
                                 <span>{returnDate.toLocaleString('default', { month: 'long' })}</span>
-                                <span className='font-bold text-3xl'>{returnDate.getDay()}</span>
+                                <span className='font-bold text-2xl'>{returnDate.getDay()}</span>
                                 <span>{returnDay}</span>
-                            </Box> : <Typography>Selest return Flight</Typography>}
-                            {isOpenReturnCal && (
-                                <DatePicker selected={returnDate} onChange={handleReturnDate} inline />
-                            )}
-                        </Box>
+                            </Box> :
+                            <Typography>Select return Flight</Typography>
+                        }
+                        {isOpenReturnCal && (
+                            <DatePicker selected={returnDate} onChange={handleReturnDate} inline />
+                        )}
                     </Box>
-                    <Box sx={{ height: '100px', width: '250px', display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
-                        <span className='flex bg-praimary-text items-center h-12 w-full rounded-sm'><input type='texy' className='focus:outline-none pl-3 w-full' placeholder='Enter address' /></span>
-                        <span className='flex bg-praimary-text items-center h-12 w-full rounded-sm'><input type='texy' className='focus:outline-none pl-3 w-full' placeholder='Enter address' /></span>
+                    <Box sx={{
+                        height: '100px',
+                        width: {
+                            xs: '100%',
+                            sm: '300px',
+                            md: '300px',
+                            lg: '300px',
+                        },
+                        display: 'flex', flexDirection: 'column', justifyContent: 'space-between'
+                    }}>
+                        <span className='flex bg-praimary-text items-center h-12 w-full rounded-sm'>
+                            <input type='texy' className='focus:outline-none pl-3 w-full' placeholder='class' />
+                        </span>
+                        <span className='flex bg-praimary-text items-center h-12 w-full rounded-sm'>
+                            <input type='texy' className='focus:outline-none pl-3 w-full' placeholder='how much days' />
+                        </span>
                     </Box>
                     <Button
                         sx={{
