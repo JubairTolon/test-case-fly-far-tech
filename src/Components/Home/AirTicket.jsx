@@ -136,7 +136,7 @@ const AirTicket = () => {
                     </Box>
                     <Box
                         sx={{
-                            display: 'flex', cursor: 'pointer', padding: '6px', backgroundColor: 'white', height: '100px', width: '120px', borderRadius: '5px'
+                            display: 'flex', cursor: 'pointer', padding: '6px', backgroundColor: 'white', height: '100px', width: '140px', borderRadius: '5px'
                         }}>
                         <Box sx={{ color: 'black', display: 'flex', width: '100%' }} onClick={handleStartCalander}>
                             <CalendarMonthIcon sx={{ fontSize: '25px', marginRight: '10px' }} />
@@ -152,7 +152,7 @@ const AirTicket = () => {
                     </Box>
                     <Box
                         sx={{
-                            display: 'flex', cursor: 'pointer', padding: '6px', backgroundColor: 'white', height: '100px', width: '120px', borderRadius: '5px'
+                            display: 'flex', cursor: 'pointer', padding: '6px', backgroundColor: 'white', height: '100px', width: '140px', borderRadius: '5px'
                         }}>
                         <Box sx={{ color: 'black', display: 'flex', width: '100%' }} onClick={handleReturnCalander}>
                             <CalendarMonthIcon sx={{ fontSize: '25px', marginRight: '10px' }} />
